@@ -61,3 +61,7 @@ body{
     background-color: var(--primario);
     color: var(--oscuro)
 }
+ /* los media querys ayudan al diseno responsivo */
+
+@media (min-width: ) {
+    
