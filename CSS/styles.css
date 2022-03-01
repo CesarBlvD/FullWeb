@@ -46,15 +46,18 @@ body{
     
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
 
 }
 @media (min-width: 480px) {
     .navegacion-principal{
         flex-direction: row;
+        justify-content: space-between;
     }
 }
 .navegacion-principal a {
+    display: block;
+    text-align: center;
     color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
@@ -66,7 +69,7 @@ body{
     background-color: var(--primario);
     color: var(--oscuro)
 }
- /* los media querys ayudan al diseno responsivo */
+ /* los media querys ayudan al diseno resñponsivo */
 
  /* tambien tienen sus tamanios 480px son telefonos y 768 son tablets */
  /* tambien 1140px son para laptos y 1400 */
