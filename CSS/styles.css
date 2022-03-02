@@ -7,6 +7,11 @@
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+/* esto ya no afecta a las cajas con un selector universal */
+*, *::before, *::after{
+    box-sizing: inherit;
 }
 body{
     font-size: 16px;    /*1rem = 10px*/
@@ -75,7 +80,9 @@ body{
  /* tambien 1140px son para laptos y 1400 */
 
 .hero{
-    background-image: url(../Imagenes/hero.jpg);
+    background-image: url(../Imagenes/hero2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 450px;
+    padding: 20px;
 }
