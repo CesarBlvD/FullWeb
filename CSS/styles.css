@@ -145,3 +145,17 @@ h1,h2,h3{
 .contenido-hero p{
     color: var(--blanco);
 }
+/* Servicios */
+@media (min-width: 768px) {
+    
+    .servicios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /*dividio de manera horizontal en 3 fracciones*/
+    
+    
+    
+        /* grid-template-columns: 300px 300px; para columnas */
+        /* grid-template-rows: 200px 800px;  filas */
+        /*el grid ayuda a seccionar el codigo como flexbox solo que a diferencia de flexbox este permite acomodarlo tanto en vertical como en horizontal*/
+    }
+}
