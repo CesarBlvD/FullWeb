@@ -4,10 +4,12 @@
     --primario:#ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --grisClaro: #dfe9f3;
 }
+/* globales */
 html{
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Hack para box model*/
 }
 /* esto ya no afecta a las cajas con un selector universal */
 *, *::before, *::after{
@@ -15,23 +17,9 @@ html{
 }
 body{
     font-size: 16px;    /*1rem = 10px*/
-    font-family: 'Krub', sans-serif;
+    font-family: 'Krub', sans-serif; /*tipo de letra*/
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);  /*Genera un degradado de color*/
 }
-
-/* .texto indica que se utiliza una clase es mejor usar clases*/
-/* #texto indicaque se utiliza un id */
-
-.titulo{
-    text-align: center;
-    font-size: 3.8rem;
-    /* color: var(--primario); */
-    
-}
-
-.titulo span{
-    font-size: 2rem;
-}
-
 .contenedor{
     max-width: 120rem;
     /* margin-top: 0;
@@ -39,11 +27,59 @@ body{
     margin-bottom: 0;
     margin-left: auto; */
 
-    /* las dos forms son lo mismo */
+    /* las dos formas son lo mismo */
 
     margin: 0 auto 0 auto;
 }
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    width: 90%;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
 
+.sombra{
+    -webkit-box-shadow:0px 5px 15px 0px rgba(112,112,112,0.54);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54); /*las tres lineas ayudan a ponerle sombra*/
+    background-color: var(--blanco);
+    padding: 2rem; /*hace la separacion a los lados*/
+    border-radius: 1rem; /*esquinas redondeadas*/
+}
+/* tipografia */
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+/* .texto indica que se utiliza una clase es mejor usar clases*/
+/* #texto indicaque se utiliza un id */
+
+/* Titulos */
+.titulo span{
+    font-size: 2rem;
+}
+/* Navegacion Principal */
 .nav-bg{
     background-color: var(--secundario);
 }
@@ -79,10 +115,33 @@ body{
  /* tambien tienen sus tamanios 480px son telefonos y 768 son tablets */
  /* tambien 1140px son para laptos y 1400 */
 
+ /* hero */
 .hero{
     background-image: url(../Imagenes/hero2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
-    padding: 20px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0,0,0,.4);
+    width: 100%;
+    height: 100%;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+
+    alinear el texto tanto horizontal como verticalmente*/
+}
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
 }
