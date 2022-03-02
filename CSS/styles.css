@@ -74,3 +74,8 @@ body{
  /* tambien tienen sus tamanios 480px son telefonos y 768 son tablets */
  /* tambien 1140px son para laptos y 1400 */
 
+.hero{
+    background-image: url(../Imagenes/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
