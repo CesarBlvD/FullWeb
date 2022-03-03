@@ -10,6 +10,15 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box; /*Hack para box model*/
+    scroll-snap-type: y mandatory; /*va hacer scroll de arriba hacia abajo*/
+}
+/* scroll snap */
+.servicios,
+.navegacion-principal,
+.formulario{
+    /*aqui se seleccionan donde se va a detener el scroll en la pagina, una en servicios y otra en navegacion principal, esto va de la mano con el mandatory*/
+    scroll-snap-align: center; 
+    scroll-snap-stop: always;
 }
 /* esto ya no afecta a las cajas con un selector universal */
 *, *::before, *::after{
@@ -168,6 +177,8 @@ h1,h2,h3{
 .contenido-hero p{
     color: var(--blanco);
 }
+
+
 /* Servicios */
 @media (min-width: 768px) {
     
